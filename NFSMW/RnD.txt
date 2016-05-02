@@ -1,0 +1,13 @@
+disable traffic and cop 
+
+do this after world is created
+
+00689BB3      /74 43             JE SHORT speed.00689BF8
+to 
+00689BB3      /EB 43             JMP SHORT speed.00689BF8
+
+----------------
+
+00532220  /$  6A FF         PUSH -1
+
+Data stuff

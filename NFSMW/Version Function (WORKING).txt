@@ -1,0 +1,13 @@
+Version Function Addr : 0x0064BAD0
+
+:: Working code :::
+
+typedef void* (__cdecl *func)(char *,int);
+func tmp = (func)ULongToPtr(0x0064BAD0);
+
+if(GetAsyncKeyState(VK_F7)&1)
+{
+		char tms[20];
+		tmp(tms,20);
+		add_log("Version : %s",tms);
+}

@@ -1,0 +1,43 @@
+/////////////////////////////////
+///	NFSMW Text Function
+/////////////////////////////////
+Call stack of main thr3ad
+Address    Stack      Procedure / arguments                                             Called from                   Frame
+0012F300   0057E953   speed.0056BFC0                                                    speed.0057E94E                0012F410
+0012F304   0012F410     Arg1 = 0012F410
+0012F308   00000800     Arg2 = 00000800
+0012F30C   100130C0     Arg3 = 100130C0 ASCII "© 2005 Electronic Arts Inc. All Rights
+
+---------
+the above func call convert ascii text to unicode text with arg1 as the address of unicode var pointer 
+and arg2 (maybe the length of unicode var)
+arg3 is the ASCII text
+---------
+(CHCK)
+crash coz of 
+0056BFED	JE SHORT 0056BFF5
+changed to
+0056BFED       90                NOP
+
+or
+
+0056BFDE      /73 06             JNB SHORT speed.0056BFE6
+changed to
+0056BFDE       90                NOP
+-----------------
+
+/////////////////////////////////
+///	NFSMW CAr spawn (maybe)
+/////////////////////////////////
+CALL speed.0075D320
+arg1 = car specs someaddr
+arg2 = car no. (maybe)
+arg3 = car specs someaddr
+
+-----------------
+
+VErsion Function EAX = pointer to char [20]
+005A325D   |.  6A 20         PUSH 20
+005A325F   |.  50            PUSH EAX
+005A3260   |.  E8 6B880A00   CALL speed.0064BAD0
+

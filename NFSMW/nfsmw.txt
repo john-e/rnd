@@ -1,0 +1,32 @@
+Bring Lan Menu on Start :
+<start>
+
+init menu proc - 12fdb4 - E1FDE1D1
+
+758f488 - 0C407210
+
+
+
+{MENU LIST}
+0055A1B9 : LAN MENU ADDR
+
+[original]
+0055A0D7      /0F85 7E010000     JNZ 0055A25B
+
+[FOR LAN MENU]
+0055A0D7      /E9 DD000000       JMP 0055A1B9
+<end>
+
+--------------------------------------------------------------------------
+;Disable Tire Blow
+0069C865
+
+;Speed Write 
+004EDBB1 - 89 41 20                   - mov [ecx+20],eax
+
+------------------------------------------
+Loading SCreen : start address
+0062D570     6A FF               PUSH -1
+
+
+

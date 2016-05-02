@@ -1,0 +1,12 @@
+0042671E  |> B8 D0158900    MOV EAX,speed.008915D0                   ;  ASCII "copmidsize"
+00426723  |> 50             PUSH EAX                                 ; /Arg1
+00426724  |. 8BCD           MOV ECX,EBP                              ; |
+00426726  |. E8 A585FFFF    CALL speed.0041ECD0                      ; \speed.0041ECD0
+
+-------------------
+
+
+8933d4 -< car collision
+
+
+925e90 -<menu background

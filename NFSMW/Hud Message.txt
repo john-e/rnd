@@ -1,0 +1,32 @@
+005680DF   .  53            PUSH EBX
+005680E0   .  68 F8418900   PUSH speed.008941F8                      ;  ASCII "%s"
+005680E5      68 21A5A732   PUSH 32A7A521
+005680EA   .  52            PUSH EDX
+005680EB   .  E8 E0D1FBFF   CALL speed.005252D0
+
+EDX = HUD_SingleRace.fng
+EBX = String
+
+------------
+
+EAX pointer to string
+
+EBX = ECX pointer pointer to DS:[06B8D8B0]=0089FBEC (speed.0089FBEC), ASCII "HUD_SingleRace.fng"
+
+006EE3D9  |.  6A 01         PUSH 1
+006EE3DB  |.  6A 00         PUSH 0
+006EE3DD  |.  6A 00         PUSH 0
+006EE3DF  |.  68 4CB19BA1   PUSH A19BB14C
+006EE3E4  |.  6A 00         PUSH 0
+006EE3E6  |.  50            PUSH EAX
+006EE3E7  |.  8BCB          MOV ECX,EBX
+006EE3E9  |.  FF52 04       CALL 00568030
+
+------------------------
+
+00568049      68 B3441700   PUSH 1744B3
+0056804E   .  68 EC07BAE0   PUSH E0BA07EC
+00568053   .  50            PUSH "HUD_SingleRace.fng"
+00568054   .  E8 B7C9FBFF   CALL speed.00524A10
+
+

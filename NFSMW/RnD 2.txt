@@ -1,0 +1,12 @@
+006F4ED1   |> \8BCE              MOV ECX,ESI                                    ;  Case 1 of switch 006F4EBF
+starting car in world
+006F4EE5   |.  E8 B6F8FFFF       CALL speed.006F47A0                            ; \speed.006F47A0
+call to pos func to set car in world after load
+
+
+
+006F47A0   /$  55                PUSH EBP
+the Func whr the pos is send.
+
+006f49ef - 8b 48 08 - mov ecx,[eax+08]
+eax stores the addr of car det structure

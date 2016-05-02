@@ -1,0 +1,19 @@
+Sky
+
+1st : chk
+
+006D1CF7    |. /75 0C             JNZ SHORT speed.006D1D05
+006D1CF9    |.  E8 62EEFEFF       CALL speed.006C0B60               ;<- call made to SKY function
+
+
+main function 
+
+006C0B60    /$  A0 D42B9800       MOV AL,BYTE PTR DS:[982BD4]
+
+
+
+rain :
+
+006DF7E5    |. /74 0D             JE SHORT speed.006DF7F4
+
+

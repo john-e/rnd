@@ -1,0 +1,92 @@
+;TIRE BLOWN
+[original]
+0069C830      7A 40         JPE SHORT speed.0069C872
+
+[Chnge to]
+0069C830     /EB 40         JMP SHORT speed.0069C872
+
+
+player POsition :
+
+ST=-2508.8183593749887640
+00697992   |.  D95E 10           FSTP DWORD PTR DS:[ESI+10]
+
+ST=148.39019775390604620
+0069799F   |.  D95E 14           FSTP DWORD PTR DS:[ESI+14]
+
+ST=1762.7618408203066700
+006979AC   |.  D95E 18           FSTP DWORD PTR DS:[ESI+18]
+
+car pos reverser (maybe): this helps ,but No AI (no cars or police) :P
+006A6FFA       8901              MOV DWORD PTR DS:[ECX],EAX
+006A6FFF   |.  8941 04           MOV DWORD PTR DS:[ECX+4],EAX
+006A7005   |.  8951 08           MOV DWORD PTR DS:[ECX+8],EDX
+
+CAR POs and misc Structure : ADDR : 009386c8  {chk : 9383b8 for ptr to recover pos}
+--------------------
+rotation Angle (wrt to road) - [float]
+rotation Angle (wrt to Z axis) - [float]
+rotation Angle (wrt to Z plane) - [float]
+rotation Angle (wrt to Z axis) - [float]
+x Coord - [float]
+z Coord - [float]
+y Coord - [float]
+[unknown]
+Drift - [float]
+Jump - [float]
+Drift - [float]
+gravity (maybe weight stuff) - [float]
+Flip (used for accident dynamics) - [float]
+Spin - [float]
+bump flip - [float]
+Friction (maybe) - [float] - {handling affected on changing}
+affects Collision 1(maybe center of mass) - [float]
+affects Collision 2(maybe center of mass) - [float]
+affects Collision 3(maybe center of mass) - [float]
+affects Collision 4(maybe center of mass) - [float] - {handling affected on changing}
+something 1- [float]
+something 2- [float]
+something 3- [float]
+something 4- [float]
+something 5- [float]
+something 6- [float]
+something 7- [float]
+bump flip type 1- [float]
+Jump type - [float]
+bump flip type 2 - [float]
+dunno (turns back to zero) - [float]
+dunno (does flip stuff) - [float]
+dunno (does jump stuff) - [float]
+dunno (does spin jump stuff) - [float]
+dunno (turns back to zero) - [float]
+dunno (does spin jump stuff) - [float]
+dunno (does spin jump stuff) - [float]
+dunno (does flip stuff) - [float]
+dunno (turns back to zero) - [float]
+flip jump LEFT stuff - [float]
+spin - [float]
+flip jump RIGHT stuff - [float]
+dunno (turns back to 1) - [float]
+something 1- [float]
+something 2- [float]
+something 3- [float]
+something 4- [float]
+something 5- [float]
+something 6- [float]
+something 7- [float]
+something 8- [float]
+--------------------
+
+X: -2509.352294922, 
+Y: 148.5617523193, 
+Z: 1763.013427734
+------------------
+
+
+speed stuff
+004DADAB    |.  D95C24 10         FSTP DWORD PTR SS:[ESP+10]
+
+BOT Car pos : 
+006B7907   |.  8B38              MOV EDI,DWORD PTR DS:[EAX]                 ;  speed.00938828
+
+
